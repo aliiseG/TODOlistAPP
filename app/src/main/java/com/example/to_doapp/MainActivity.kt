@@ -2,6 +2,7 @@ package com.example.to_doapp
 
 import android.app.Activity
 import android.content.Intent
+import android.icu.text.SimpleDateFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -15,7 +16,6 @@ import com.example.to_doapp.model.TaskViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
-    var m = 3
     private val newTaskActivityRequestCode = 1
     private val taskViewModel: TaskViewModel by viewModels {
         TaskViewModelFactory((application as TaskApplication).repository)
@@ -45,8 +45,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, intentData: Intent?) {
+
         super.onActivityResult(requestCode, resultCode, intentData)
         if (requestCode == newTaskActivityRequestCode && resultCode == Activity.RESULT_OK) {
+//            val date = Calendar.getInstance().time
+//            val formatter = SimpleDateFormat.getDateTimeInstance() //or use getDateInstance()
+//            val formatedDate = formatter.format(date)
             intentData?.getStringExtra(NewTaskActivity.EXTRA_REPLY)?.let { reply ->
                 val task = Task(0,reply)
                 taskViewModel.insert(task)
