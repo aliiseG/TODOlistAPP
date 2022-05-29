@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alise/AndroidStudioProjects/Todoapp2/app/src/main/res/layout/activity_main.xml" value="0.42470389170896783" />
+        <entry key="..\:/Users/alise/AndroidStudioProjects/Todoapp2/app/src/main/res/layout/activity_new_task.xml" value="0.33" />
         <entry key="..\:/Users/alise/AndroidStudioProjects/Todoapp2/app/src/main/res/layout/list_item.xml" value="0.2692502532928065" />
         <entry key="..\:/Users/alise/AndroidStudioProjects/Todoapp2/app/src/main/res/layout/recyclerview_item.xml" value="0.2674772036474164" />
       </map>

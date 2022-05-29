@@ -33,11 +33,15 @@ public abstract class TaskRoomDatabase : RoomDatabase() {
         suspend fun populateDatabase(taskDao: TaskDao) {
             // Delete all content here.
             taskDao.deleteAll()
-            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
-            val currentDate = sdf.format(Date())
-            var task = Task(1,"Hello","Hello world mybe", "12.03.2022",currentDate.toString())
+//            val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+//            val currentDate = sdf.format(Date())
+//            var task = Task(1,"Hello","Hello world mybe", "12.03.2022",currentDate.toString())
+//            taskDao.insert(task)
+//            task = Task(2,"World","Hello world part 2", "15.03.2022",currentDate.toString())
+//            taskDao.insert(task)
+            var task = Task(0,"Hello")
             taskDao.insert(task)
-            task = Task(2,"World","Hello world part 2", "15.03.2022",currentDate.toString())
+            task = Task(0,"World")
             taskDao.insert(task)
 
         }
